@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="/media/SOUMYA/9_3_2011/djcode/mysite/templates/jquery-1.5.js">
+</script>
+<script>
+function nav()
+{
+if(document.f1.mydropdown.selectedIndex == 1){
+alert("before get");
+$.get("site_media/1.html");//,function(data){alert(data)});
+document.f1.message.value='hello';
+}
+if(document.f1.mydropdown.selectedIndex == 2){
+      document.f1.message.value='ooooooooooooooooooooooooooooooooooookk';
+}
+}
+</script>
+</head>
+<body>
+   <form name=f1 action="/contact/" method="post">
+   <p>Message: <textarea name="message" rows="100" cols="60"></textarea></p>
+   <select name="mydropdown" onChange="nav()">
+   <option value="0">select</option>
+   <option value="1">resume</option>
+   <option value="2">other</option>
+   </select>
+   <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

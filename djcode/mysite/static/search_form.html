@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="/site_media/jquery-1.5.js">
+</script>
+<script>
+function nav(){
+	if(document.f1.mydropdown.selectedIndex == 1){
+		$.get("/site_media/resume.txt", function(data){
+			document.f1.message.value = data;
+		});
+	}			
+	if(document.f1.mydropdown.selectedIndex == 2){
+      		document.f1.message.value='other';
+	}
+}
+</script>
+</head>
+<body>
+   <form name=f1 action="/contact/" method="post">
+   <p>Message: <textarea name="message" rows="80" cols="60"></textarea></p>
+   <select name="mydropdown" onChange="nav()">
+   <option value="0">select</option>
+   <option value="1">resume</option>
+   <option value="2">other</option>
+   </select>
+   <input type="submit" value="Submit">
+   </form>
+</body>
+</html>
+

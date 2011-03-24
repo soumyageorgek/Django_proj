@@ -1,0 +1,1 @@
+Using drop_down box we can select different templates from server.After neccessary editing, if we submit the template to server.The server does latex processing and sends back the produced pdf to site.Using this, a client can get pdf from template to his system,when his system itself do not have the utility to do that.
